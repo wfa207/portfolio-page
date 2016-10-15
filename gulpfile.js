@@ -51,7 +51,7 @@ gulp.task('minify-js', function() {
 });
 
 // Run everything
-gulp.task('default', ['less', 'minify-css', 'minify-js']);
+gulp.task('build', ['less', 'minify-css', 'minify-js']);
 
 // Configure the browserSync task
 gulp.task('browserSync', function() {
@@ -63,7 +63,7 @@ gulp.task('browserSync', function() {
 });
 
 // Dev task with browserSync
-gulp.task('dev', ['browserSync', 'less', 'minify-css', 'minify-js'], function() {
+gulp.task('default', ['browserSync', 'less', 'minify-css', 'minify-js'], function() {
     gulp.watch('assets/less/*.less', ['less']);
     gulp.watch('public/css/*.css', ['minify-css']);
     gulp.watch('public/js/*.js', ['minify-js']);
