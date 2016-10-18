@@ -15,7 +15,7 @@ export default class Overview extends Component {
         <div className='container'>
           <div className='row'>
             <div className='col-lg-12'>
-              <img className='img-responsive' src='img/profile_icon.png'/>
+              <img className='img-responsive' src={require('../../../assets/img/profile_icon.png')}/>
               <div className='intro-text'>
                 <span className='name'>Wes Auyeung</span>
                 <hr className='star-light'/>

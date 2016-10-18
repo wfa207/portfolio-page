@@ -15,12 +15,13 @@ module.exports = {
     style: './assets/style'
   },
   output: {
-    path: path.join(__dirname, './public'),
+    path: path.join(__dirname, 'public'),
+    publicPath: '/static/',
     filename: '[name].js'
   },
   plugins: [
     new ExtractTextPlugin('[name].css', { allChunks: true }),
-    new webpack.optimize.UglifyJsPlugin(),
+    new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false } }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
@@ -30,15 +31,18 @@ module.exports = {
   ],
   module: {
     loaders: [{
-      test: /\.js?$/, loader: 'react-hot',
-      include: path.join(__dirname, 'app')
+      test: /.*\.(gif|png|jpe?g|svg)$/i,
+        loaders: [
+          'file?hash=sha512&digest=hex&name=[hash].[ext]',
+          'image-webpack'
+        ]
     }, {
       test: /\.js$/,
       exclude: /(node_modules)/,
       loader: 'babel',
       query: {
-        // plugins: ['react-hot-loader/babel'],
-        presets: ['es2015', 'react']
+        presets: ['es2015', 'react'],
+        plugins: ['react-hot-loader/babel']
       }
     }, {
       test: /\.less$/,
