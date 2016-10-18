@@ -5,8 +5,16 @@ import React, { Component } from 'react';
 export default class Contact extends Component {
   constructor(props) {
     super(props);
+    this.state = {};
+    this.handleChange = this.handleChange.bind(this);
   }
 
+  handleChange(event) {
+    // this.setState({ [even]: event.target.value });
+    // console.log(this.state);
+    console.log(event.target);
+  }
+  
   render() {
     return (
       <section id='contact'>
@@ -19,11 +27,11 @@ export default class Contact extends Component {
           </div>
           <div className='row'>
             <div className='col-lg-8 col-lg-offset-2'>
-              <form name='sentMessage' id='contactForm' novalidate>
+              <form name='sentMessage' id='contactForm' noValidate>
                 <div className='row control-group'>
                   <div className='form-group col-xs-12 floating-label-form-group controls'>
                     <label>Name</label>
-                    <input type='text' className='form-control' placeholder='Name' id='name' required data-validation-required-message='Please enter your name.'/>
+                    <input type='text' className='form-control' placeholder='Name' id='name' required data-validation-required-message='Please enter your name.' onChange={this.handleChange}/>
                     <p className='help-block text-danger'></p>
                   </div>
                 </div>
