@@ -9,6 +9,7 @@ export default class Project extends Component {
 
   render() {
     return (
+      <div>
       <div className='col-sm-4 portfolio-item'>
         <a href={'#' + this.props.link} className='portfolio-link' data-toggle='modal'>
           <div className='caption'>
@@ -18,6 +19,7 @@ export default class Project extends Component {
           </div>
           <img src={this.props.img} className='img-responsive'/>
         </a>
+      </div>
       </div>
     );
   }
