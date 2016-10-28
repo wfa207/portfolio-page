@@ -30,6 +30,7 @@ export default class Portfolio extends Component {
         </div>
       </section>
       { projects.map((project, i) => <Modal
+        key={i + 1}
         link={project.link}
         img={project.img}
         {...project.modal}/>) }

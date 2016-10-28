@@ -9,13 +9,14 @@ export default class Modal extends Component {
   }
 
   render() {
-    let teamNum = this.props.teamMembers.length;
-    let teamStr = arrayConcat(this.props.teamMembers);
+    let teamMembersProp = this.props.teamMembers;
+    let teamNum = teamMembersProp ? teamMembersProp.length : null;
+    let teamStr = arrayConcat(teamMembersProp);
     let teamHTML;
     if (teamNum > 0) { teamHTML = <li>{'Team Member' + (teamNum > 1 ? 's' : '') + ':'} <strong>{teamStr}</strong></li>; }
       
     return (
-      <div className='portfolio-modal modal fade' id={this.props.link} tabindex='-1' role='dialog' aria-hidden='true'>
+      <div className='portfolio-modal modal fade' id={this.props.link} tabIndex='-1' role='dialog' aria-hidden='true'>
         <div className='modal-content'>
           <div className='close-modal' data-dismiss='modal'>
             <div className='lr'>

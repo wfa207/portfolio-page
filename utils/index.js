@@ -18,6 +18,7 @@ export const htmlAttrGen = function(str) {
 };
 
 export const arrayConcat = function(arr) {
+  if (typeof arr !== 'object') { return false; }
   if (arr.length === 1) { return arr[0]; }
   let outputArr = [];
   for (let i = 0; i < arr.length; i++) {

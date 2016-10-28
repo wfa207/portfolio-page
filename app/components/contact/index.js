@@ -32,23 +32,6 @@ export default class Contact extends Component {
               <h3>wesley.auyeung89@gmail.com</h3>
             </div>
           </div>
-          { /* <div className='row'>
-            <div className='col-lg-8 col-lg-offset-2'>
-              <form name='sentMessage' id='contactForm' noValidate>
-                { inputFields.map(inputField => <InputField
-                  label={inputField}
-                  key={htmlAttrGen(inputField)}
-                  handleChange={this.handleChange}/>) }
-                <br/>
-                <div id='success'></div>
-                <div className='row'>
-                  <div className='form-group col-xs-12'>
-                    <button type='submit' className='btn btn-success btn-lg'>Send</button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div> */ }
         </div>
       </section>
     );

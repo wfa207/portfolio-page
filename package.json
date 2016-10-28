@@ -5,7 +5,6 @@
   "main": "server/app.js",
   "scripts": {
     "start": "node server/app.js",
-    "server": "nodemon server/app.js -e js, less, css, html",
     "build": "webpack --config webpack-production.config.js -p",
     "dev": "node server/webpackDevServer.js",
     "test": "test"

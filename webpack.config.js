@@ -5,6 +5,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
 
 module.exports = {
+  devtool: 'cheap-module-eval-source-map',
   entry: {
     bundle: [
       'webpack-dev-server/client?http://localhost:8080',
@@ -27,10 +28,11 @@ module.exports = {
   module: {
     loaders: [{
       test: /.*\.(gif|png|jpe?g|svg)$/i,
-        loaders: [
-          'file?hash=sha512&digest=hex&name=[hash].[ext]',
-          'image-webpack'
-        ]
+      exclude: /(node_modules)/,
+      loaders: [
+        'file?hash=sha512&digest=hex&name=[hash].[ext]',
+        'image-webpack'
+      ]
     }, {
       test: /\.js$/,
       exclude: /(node_modules)/,
