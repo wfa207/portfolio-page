@@ -9,7 +9,7 @@ module.exports = {
   entry: {
     bundle: [
       './app/portfolio.js',
-      './app/assets.js'
+      './assets'
     ],
     style: './assets/style'
   },
