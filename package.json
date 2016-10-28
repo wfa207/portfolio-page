@@ -5,10 +5,9 @@
   "main": "server/app.js",
   "scripts": {
     "start": "node server/app.js",
-    "build": "webpack --config webpack-production.config.js -p",
-    "dev": "node server/webpackDevServer.js",
-    "test": "test",
-    "deploy": "npm run build && git add -A && git commit -m 'deploy' && git push heroku master"
+    "postinstall": "node deploy",
+    "prod": "webpack --config webpack-production.config.js -p && NODE_ENV=production PORT=7000 npm start",
+    "dev": "node server/webpackDevServer.js"
   },
   "repository": {
     "type": "git",
@@ -24,34 +23,35 @@
   },
   "homepage": "https://github.com/n/a#readme",
   "dependencies": {
-    "body-parser": "^1.15.2",
-    "bootstrap": "^3.3.7",
-    "browser-sync": "^2.16.0",
-    "express": "^4.14.0",
-    "jquery": "^3.1.1",
-    "jquery.easing": "^1.4.1",
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2",
-    "webpack": "^1.13.2"
-  },
-  "devDependencies": {
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.5",
     "babel-preset-es2015": "^6.16.0",
     "babel-preset-react": "^6.16.0",
-    "babel-preset-react-hmre": "^1.1.1",
+    "body-parser": "^1.15.2",
+    "bootstrap": "^3.3.7",
+    "browser-sync": "^2.16.0",
     "css-loader": "^0.25.0",
+    "express": "^4.14.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
     "font-awesome": "^4.6.3",
     "image-webpack-loader": "^3.0.0",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
-    "nodemon": "^1.11.0",
-    "react-hot-loader": "^3.0.0-beta.6",
+    "jquery": "^3.1.1",
+    "jquery.easing": "^1.4.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
     "script-loader": "^0.7.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
+    "webpack": "^1.13.2"
+  },
+  "devDependencies": {
+    "babel-preset-react-hmre": "^1.1.1",
+    "http-proxy": "^1.15.2",
+    "nodemon": "^1.11.0",
+    "react-hot-loader": "^3.0.0-beta.6",
     "webpack-dev-server": "^1.16.2"
   }
 }
