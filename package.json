@@ -4,8 +4,9 @@
   "description": "My portfolio page",
   "main": "server/app.js",
   "scripts": {
-    "start": "node server/webpackDevServer.js",
-    "server": "nodemon server/app.js -e js, less, css, html",
+    "start": "node server/app.js",
+    "build": "webpack --config webpack-production.config.js -p",
+    "dev": "node server/webpackDevServer.js",
     "test": "test"
   },
   "repository": {

@@ -21,6 +21,11 @@ const app = (
     <About/>
     <Contact/>
     <footer className='text-center'></footer>
+    <div className="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+        <a className="btn btn-primary" href="#page-top">
+            <i className="fa fa-chevron-up"></i>
+        </a>
+    </div>
   </div>
 );
 

@@ -5,11 +5,9 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'cheap-module-source-map',
   entry: {
     bundle: [
-      'webpack-dev-server/client?http://localhost:8080',
-      'webpack/hot/only-dev-server', 
       './app/portfolio.js',
       './app/assets.js'
     ],
@@ -23,7 +21,12 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin('[name].css', { allChunks: true }),
     new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false } }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    })
   ],
   module: {
     loaders: [{
