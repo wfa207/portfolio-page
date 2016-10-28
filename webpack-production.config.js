@@ -30,9 +30,12 @@ module.exports = {
   ],
   module: {
     loaders: [{
-      test: /\.(jpg|jpeg|gif|png|ico)$/,
+      test: /.*\.(gif|png|jpe?g|svg)$/i,
       exclude: /(node_modules)/,
-      loader:'file-loader?name=[name].[ext]'
+      loaders: [
+        'file?hash=sha512&digest=hex&name=[hash].[ext]',
+        'image-webpack'
+      ]
     }, {
       test: /\.js$/,
       exclude: /(node_modules)/,
