@@ -7,7 +7,8 @@
     "start": "node server/app.js",
     "build": "webpack --config webpack-production.config.js -p",
     "dev": "node server/webpackDevServer.js",
-    "test": "test"
+    "test": "test",
+    "deploy": "npm run build && git add -A && git commit -m 'deploy' && git push heroku master"
   },
   "repository": {
     "type": "git",
