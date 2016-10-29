@@ -11,7 +11,6 @@ import NavBar from './components/navbar';
 import Overview from './components/overview';
 import Projects from './components/projects';
 import About from './components/about';
-import Contact from './components/contact';
 
 const app = (
   <div>
@@ -19,7 +18,6 @@ const app = (
     <Overview/>
     <Projects/>
     <About/>
-    <Contact/>
     <footer className='text-center'></footer>
     <div className="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
         <a className="btn btn-primary" href="#page-top">
