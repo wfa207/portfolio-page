@@ -3,9 +3,6 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const httpProxy = require('http-proxy');
-
-let proxy = httpProxy.createProxyServer();
 let app = express();
 
 const isProduction = process.env.NODE_ENV === 'production';
@@ -18,6 +15,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 if (!isProduction) {
+  const httpProxy = require('http-proxy');
+  let proxy = httpProxy.createProxyServer();
   const devServer = require('./webpackDevServer');
   devServer();
 
