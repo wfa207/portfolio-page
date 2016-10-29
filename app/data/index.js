@@ -48,5 +48,3 @@ export const projects = [
       projectType: 'Web Development'
     } 
   }];
-
-export const inputFields = ['name', 'email address', 'phone number', 'message'];
