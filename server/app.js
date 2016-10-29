@@ -4,14 +4,12 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const httpProxy = require('http-proxy');
-const webpackConfig = require('../webpack.config.js');
 
 let proxy = httpProxy.createProxyServer();
 let app = express();
 
 const isProduction = process.env.NODE_ENV === 'production';
 const port = isProduction ? process.env.PORT : 7000;
-const publicBuildPath = webpackConfig.output.publicPath + '*';
 
 if (isProduction) {
   app.use('/static', express.static(path.join(__dirname, '../static')));

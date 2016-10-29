@@ -3,7 +3,6 @@
 const Webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
 const config = require('../webpack.config.js');
-const path = require('path');
 
 module.exports = () => {
   let bundleStart;
