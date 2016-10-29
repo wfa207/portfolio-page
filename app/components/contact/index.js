@@ -9,12 +9,6 @@ export default class Contact extends Component {
   constructor(props) {
     super(props);
     this.state = {};
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange(event) {
-    let elem = event.target;
-    this.setState({ [elem.id]: elem.value.substr(0, 255) });
   }
   
   render() {
