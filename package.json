@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server/app.js",
     "postinstall": "node deploy",
-    "prod": "webpack --config webpack-production.config.js -p && NODE_ENV=production PORT=7000 npm start",
+    "prod": "webpack --config webpack-production.config.js -p && NODE_ENV=production PORT=7000 npm start"
   },
   "repository": {
     "type": "git",
