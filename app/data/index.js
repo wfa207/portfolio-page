@@ -13,7 +13,7 @@ export const projects = [
     modal: {
       title: 'Air Mapper',
       url: 'https://air-mapper.herokuapp.com',
-      description: 'Air Mapper is an application designed to calculate the distance between two US airports in miles. The core stack used to put this application together was comprised of: Node, Express and React. In addition, several frameworks, in addition to a handful of API\'s, were used in putting together this application, including: Webpack, Babel, Bootstrap, Redux (coupled with React-Redux), and Google\'s Maps API',
+      description: 'Air Mapper is an application designed to calculate the distance between two US airports in miles. The core stack used to put this application together was comprised of: Node, Express and React. Several frameworks, in addition to a handful of API\'s, were used in putting together this application, including: Webpack, Babel, Bootstrap, Redux (coupled with React-Redux), and the Google\'s Maps API',
       date: 'October 2016',
       projectType: 'Web development'
     }
@@ -22,7 +22,7 @@ export const projects = [
     modal: {
       title: 'DownTime',
       url: '#',
-      description: 'My teammates and I created DownTime to serve as our capstone project, our final project as students at Fullstack Academy. The application was built in three weeks and is designed to track a user\'s location throughout the day and aggregating this data to provide a visualization of how the user spent his or her time. DownTime was our first foray into mobile development as well as our first attempt at using the React framework. In addition to React-Native, we also incorporated several open-source libraries including react-native-store and react-native-maps.',
+      description: 'My teammates and I created DownTime to serve as our capstone project, our final project as students at Fullstack Academy. The application was built in three weeks and is designed to track a user\'s location throughout the day, aggregating this data to provide a visualization of how the user spent his or her time. DownTime was our first foray into mobile development as well as our first attempt at using the React framework. In addition to React-Native, we also incorporated several open-source libraries including react-native-store and react-native-maps.',
       date: 'July 2016',
       teamMembers: ['Tom Bradley', 'Jon Rim'],
       projectType: 'Mobile Development'
